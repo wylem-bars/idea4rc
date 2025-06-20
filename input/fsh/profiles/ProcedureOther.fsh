@@ -34,4 +34,4 @@ Description: "This profile defines how to represent Isolated Limb Perfusion and 
 * reasonReference 1..  // add reference to the diagnosis
 * reasonReference only Reference(ConditionPrimaryCancerI4rc)
 // * bodySite 0..1 MS 
-* outcome ^short = "ADD VOC BINDING"
+* outcome from VsTreatmentResponseI4rc
