@@ -13,9 +13,8 @@ Description: "This profile defines how to represent Isolated Limb Perfusion and 
 // * extension[ProcedureCategoryR5].valueCodeableConcept from XXXX
 
 /* * text ^short = "Textual description of the surgical procedure"
-* identifier ^short = "External Identifiers for this surgical procedure"
-* partOf only Reference (ProcedureSurgeryI4rc)
-* partOf ^short = "Reference to the parent surgery procedure" */
+* identifier ^short = "External Identifiers for this surgical procedure" */
+* partOf only Reference (HnCancerStageGroup)
 * status ^short = "State of the procedure"
 /* * category 1..
 * category = $sct#387713003 
