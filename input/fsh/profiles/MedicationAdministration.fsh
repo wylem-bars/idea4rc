@@ -45,7 +45,8 @@ Description: "This profile defines how to represent MedicationAdministration in 
   SameHospital named sameHospital 0..1 and 
   outcome named outcome 0..1 and 
   $mcode-procedure-intent  named intent 0..1 and 
-  $medicationadministration-category-r5 named categoryR5 1..*
+  $medicationadministration-category-r5 named categoryR5 1..* and
+  NumberOfCycles named numberOfCycles 0..1
 
 * extension[categoryR5].value[x] only CodeableConcept
 * extension[categoryR5].valueCodeableConcept from VsTypeofSystemicTreatmentI4rc (preferred)
@@ -77,6 +78,13 @@ Description: "The outcome of the medication administration in the context of can
 * value[x] only CodeableConcept
 * valueCodeableConcept from VsTreatmentResponseI4rc (preferred)
 * valueCodeableConcept MS
+
+Extension: NumberOfCycles
+Id: number-of-cycles
+Title: "Number of Chemotherapy Cycles"
+Description: "Indicates the number of chemotherapy cycles prescribed or administered."
+* value[x] only decimal
+* valueDecimal MS
 
 /* //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  MedicationStatementI4rc
